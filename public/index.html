@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billetera Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌟 Billetera Digital</h1>
+    </header>
+    <main>
+        <section id="forms">
+            <form id="transaction-form">
+                <h2>Registrar Transacción</h2>
+                <input type="text" id="account" placeholder="Cuenta destino" required />
+                <input type="text" id="source-account" placeholder="Cuenta origen (opcional)" />
+                <select id="type" required>
+                    <option value="">Tipo</option>
+                    <option value="deposit">Depósito</option>
+                    <option value="withdrawal">Retiro</option>
+                </select>
+                <input type="number" id="amount" placeholder="Monto" required />
+                <input type="date" id="date" required />
+                <button type="submit">Registrar</button>
+            </form>
+
+            <form id="service-form">
+                <h2>Registrar Servicio</h2>
+                <input type="text" id="service-account" placeholder="Cuenta" required />
+                <select id="service-type" required>
+                    <option value="">Tipo de Servicio</option>
+                    <option value="paquete-celular">Paquete Celular</option>
+                    <option value="servicio-publico">Servicio Público</option>
+                </select>
+                <input type="number" id="service-amount" placeholder="Monto" required />
+                <input type="date" id="service-date" required />
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+        <section id="records">
+            <h2>Movimientos Recientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cuenta Destino</th>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                        <th>Cuenta Origen</th>
+                    </tr>
+                </thead>
+                <tbody id="records-table"></tbody>
+            </table>
+            <button id="show-logs">Mostrar Logs</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
